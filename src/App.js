@@ -39,6 +39,7 @@ class App extends React.Component {
       showDialogBox: false,
       recipes: recipes,
       clearDialogBoxInputs: false,
+      nextRecipeId: recipes.length + 1,
     };
   }
 
@@ -53,6 +54,7 @@ class App extends React.Component {
   handleCreateRecipe = (e, recipe) => {
     e.preventDefault();
     this.setState(state => {
+      recipe.id = state.nextRecipeId++;
       state.recipes.push(recipe);
       state.showDialogBox = false;
       return state;
