@@ -14,20 +14,8 @@ class CreateRecipeDialogBox extends React.Component {
     };
   }
 
-  handleNameInput = e => {
-    this.setState({ name: e.target.value });
-  };
-
-  handleInstructionsTextArea = e => {
-    this.setState({ instructions: e.target.value });
-  };
-
-  handleIngredientInput = e => {
-    this.setState({ ingredient: e.target.value });
-  };
-
-  handleImgUrlInput = e => {
-    this.setState({ img_url: e.target.value });
+  handleInputChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   handleCloseDialogBox = e => {
@@ -51,7 +39,6 @@ class CreateRecipeDialogBox extends React.Component {
   };
 
   checkAddIngredientInput = () => {
-    if (this.state.ingredients.find(ingredient => ingredient.name === this.state.ingredient.name)) return;
     this.setState(state => {
       state.ingredients.push(state.ingredient);
       state.ingredient = '';
@@ -92,7 +79,8 @@ class CreateRecipeDialogBox extends React.Component {
             className="create-recipe-dialog-box__text-input" 
             type="text"
             value={this.state.name}
-            onChange={this.handleNameInput}
+            onChange={this.handleInputChange}
+            name="name"
           />
         </label>
         <label className="create-recipe-dialog-box__form-element">
@@ -102,7 +90,8 @@ class CreateRecipeDialogBox extends React.Component {
             cols="40" 
             className="create-recipe-dialog-box__recipe-instructions"
             value={this.state.instructions}
-            onChange={this.handleInstructionsTextArea}
+            onChange={this.handleInputChange}
+            name="instructions"
           />
         </label>
         <label className="create-recipe-dialog-box__form-element">
@@ -117,7 +106,8 @@ class CreateRecipeDialogBox extends React.Component {
                 type="text" 
                 placeholder="Ingredient"
                 value={this.state.ingredient}
-                onChange={this.handleIngredientInput}
+                onChange={this.handleInputChange}
+                name="ingredient"
               />
             </li>
           </ol>
@@ -129,7 +119,8 @@ class CreateRecipeDialogBox extends React.Component {
             className="create-recipe-dialog-box__text-input" 
             type="text" 
             value={this.state.img_url}
-            onChange={this.handleImgUrlInput}
+            onChange={this.handleInputChange}
+            name="img_url"
           />
         </label>
         <label className="create-recipe-dialog-box__form-element">
