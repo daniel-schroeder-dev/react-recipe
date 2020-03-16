@@ -8,6 +8,7 @@ import './App.css';
 
 const recipes = [
   {
+    id: 1,
     img_url: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/homemade-spaghetti-sauce-horizontal-1530890913.jpg',
     name: 'Spaghetti',
     ingredients: [
@@ -18,6 +19,7 @@ const recipes = [
     instructions: 'Open jar of sauce. Begin to simmer water. Boil water. Cook pasta until tender. Combine pasta and sauce.',
   },
   {
+    id: 2,
     img_url: 'https://www.papajohns.com/static-assets/a/images/web/product/pizzas/sausage-slate-compressed.jpg',
     name: 'Pizza',
     ingredients: [
