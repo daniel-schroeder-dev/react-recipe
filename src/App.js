@@ -38,13 +38,12 @@ class App extends React.Component {
     this.state = {
       showDialogBox: false,
       recipes: recipes,
-      clearDialogBoxInputs: false,
       nextRecipeId: recipes.length + 1,
     };
   }
 
   handleOpenDialogBox = e => {
-    this.setState({ showDialogBox: true, clearDialogBoxInputs: true });
+    this.setState({ showDialogBox: true});
   };
 
   handleCloseDialogBox = e => {
@@ -80,7 +79,6 @@ class App extends React.Component {
             showDialogBox={this.state.showDialogBox}
             handleCloseDialogBox={this.handleCloseDialogBox}
             handleCreateRecipe={this.handleCreateRecipe}
-            clearDialogBoxInputs={this.state.clearDialogBoxInputs}
           />
           <RecipeList 
             recipes={this.state.recipes}
