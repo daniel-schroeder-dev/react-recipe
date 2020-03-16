@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #606c82;
+  color: #fff;
+  padding: 12px 24px;
+}
+
+.header__page-title {
+  margin: 0;
+}
+
+.header__nav-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header__nav-item {
+  margin-left: 24px;
+  cursor: pointer;
+}
