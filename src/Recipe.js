@@ -4,7 +4,7 @@ import './Recipe.css';
 function Recipe(props) {
 
   function handleDeleteRecipe(e) {
-    props.handleDeleteRecipe(props.recipe);
+    props.handleDeleteRecipe(props.recipe.id);
   }
 
   return (

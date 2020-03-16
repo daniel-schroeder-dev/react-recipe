@@ -60,9 +60,9 @@ class App extends React.Component {
     });
   };
 
-  handleDeleteRecipe = recipeToRemove => {
+  handleDeleteRecipe = id => {
     this.setState(state => {
-      state.recipes = state.recipes.filter(recipe => recipe.name !== recipeToRemove.name);
+      state.recipes = state.recipes.filter(recipe => recipe.id !== id);
       return state;
     });
   };
