@@ -106,7 +106,7 @@ class App extends React.Component {
             recipes={this.state.recipes}
             handleDeleteRecipe={this.handleDeleteRecipe}
           />
-          <NoRecipesBanner recipes={this.state.recipes} />
+          {!this.state.recipes.length && <NoRecipesBanner />}
         </div>
       </div>
     );
