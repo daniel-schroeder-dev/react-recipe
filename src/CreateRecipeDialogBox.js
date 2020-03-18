@@ -62,7 +62,7 @@ class CreateRecipeDialogBox extends React.Component {
       instructions: '',
       img_url: '',
     });
-    this.props.handleCreateRecipe(e, recipe);
+    this.props.handleCreateRecipe(recipe);
   };
 
   render() {

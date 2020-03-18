@@ -50,10 +50,8 @@ class App extends React.Component {
     this.setState({ showDialogBox: false });
   };
 
-  handleCreateRecipe = (e, recipe) => {
+  handleCreateRecipe = recipe => {
 
-    e.preventDefault();
-    
     this.setState((state, props) => {
 
       const recipes = [...state.recipes];
