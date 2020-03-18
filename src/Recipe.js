@@ -18,7 +18,7 @@ function Recipe(props) {
         </ul>
         <h3>Instructions:</h3>
         <p>{props.recipe.instructions}</p>
-        <button onClick={handleDeleteRecipe}>Delete Recipe</button>
+        <button className="recipe-card__btn" onClick={handleDeleteRecipe}>Delete Recipe</button>
       </div>
     </li>
   );

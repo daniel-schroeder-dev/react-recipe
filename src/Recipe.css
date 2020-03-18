@@ -12,3 +12,8 @@
 .recipe-card__content {
   padding: 18px;
 }
+
+.recipe-card__btn {
+  padding: 6px;
+  border-radius: 4px;
+}
