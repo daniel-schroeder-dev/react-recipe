@@ -1,5 +1,6 @@
 import React from 'react';
 import Recipe from './Recipe';
+import PropTypes from 'prop-types';
 import './RecipeList.css';
 
 function RecipeList(props) {
@@ -9,5 +10,10 @@ function RecipeList(props) {
     </ul>
   );
 }
+
+RecipeList.propTypes = {
+  recipes: PropTypes.array.isRequired,
+  handleDeleteRecipe: PropTypes.func.isRequired,
+};
 
 export default RecipeList;
