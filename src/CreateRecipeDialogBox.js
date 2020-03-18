@@ -31,10 +31,10 @@ class CreateRecipeDialogBox extends React.Component {
 
   handleAddIngredientClick = e => {
     e.preventDefault();
-    this.setState(state => {
-      state.ingredients.push(state.ingredient);
-      state.ingredient = '';
-      return state;
+    this.setState((state, props) => {
+      const ingredients = [...state.ingredients];
+      ingredients.push(state.ingredient);
+      return { ingredients, ingredient: '' };
     });
   };
 
