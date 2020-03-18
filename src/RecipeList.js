@@ -12,7 +12,7 @@ function RecipeList(props) {
 }
 
 RecipeList.propTypes = {
-  recipes: PropTypes.array.isRequired,
+  recipes: PropTypes.arrayOf(PropTypes.object).isRequired,
   handleDeleteRecipe: PropTypes.func.isRequired,
 };
 
