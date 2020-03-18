@@ -78,18 +78,30 @@ class App extends React.Component {
   };
 
   render() { 
+
+    let createRecipeDialogBox = null;
+    let greyOutBox = null;
+
+    if (this.state.showDialogBox) {
+      createRecipeDialogBox = (
+        <CreateRecipeDialogBox 
+          handleCloseDialogBox={this.handleCloseDialogBox}
+          handleCreateRecipe={this.handleCreateRecipe}
+        />
+      );
+      greyOutBox = (
+        <GreyOutBox />
+      );
+    }
+
     return (
       <div>
-        <GreyOutBox showGreyOutBox={this.state.showDialogBox}/>
+        {greyOutBox}
         <div className="app">
           <Header 
             handleOpenDialogBox={this.handleOpenDialogBox}
           />
-          <CreateRecipeDialogBox 
-            showDialogBox={this.state.showDialogBox}
-            handleCloseDialogBox={this.handleCloseDialogBox}
-            handleCreateRecipe={this.handleCreateRecipe}
-          />
+          {createRecipeDialogBox}
           <RecipeList 
             recipes={this.state.recipes}
             handleDeleteRecipe={this.handleDeleteRecipe}

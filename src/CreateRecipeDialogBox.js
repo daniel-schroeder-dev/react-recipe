@@ -65,10 +65,6 @@ class CreateRecipeDialogBox extends React.Component {
   };
 
   render() {
-    if (!this.props.showDialogBox) {
-      return null;
-    }
-    
     return (
       <form className="create-recipe-dialog-box" onSubmit={this.handleCreateRecipe}>
         <span className="create-recipe-dialog-box__close-btn btn" onClick={this.handleCloseDialogBox}>x</span>
