@@ -9,9 +9,6 @@ function Header(props) {
       <nav className="header__nav">
         <ol className="header__nav-list">
           <li className="header__nav-item" onClick={props.handleOpenDialogBox}>New Recipe</li>
-          <li className="header__nav-item">Home</li>
-          <li className="header__nav-item">About</li>
-          <li className="header__nav-item">Contact</li>
         </ol>
       </nav>
     </header>
