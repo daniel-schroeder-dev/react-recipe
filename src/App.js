@@ -51,13 +51,24 @@ class App extends React.Component {
   };
 
   handleCreateRecipe = (e, recipe) => {
+
     e.preventDefault();
-    this.setState(state => {
-      recipe.id = state.nextRecipeId++;
-      state.recipes.push(recipe);
-      state.showDialogBox = false;
-      return state;
+    
+    this.setState((state, props) => {
+
+      const recipes = [...state.recipes];
+
+      recipe.id = state.nextRecipeId;
+      recipes.push(recipe);
+      
+      return { 
+        recipes, 
+        nextRecipeId: state.nextRecipeId + 1, 
+        showDialogBox: false,
+      };
+    
     });
+
   };
 
   handleDeleteRecipe = id => {
