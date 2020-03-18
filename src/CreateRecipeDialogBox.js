@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './CreateRecipeDialogBox.css';
 
 class CreateRecipeDialogBox extends React.Component {
@@ -130,5 +131,10 @@ class CreateRecipeDialogBox extends React.Component {
   }
   
 }
+
+CreateRecipeDialogBox.propTypes = {
+  handleCloseDialogBox: PropTypes.func.isRequired,
+  handleCreateRecipe: PropTypes.func.isRequired,
+};
 
 export default CreateRecipeDialogBox;
