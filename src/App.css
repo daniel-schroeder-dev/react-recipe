@@ -1,8 +1,7 @@
 .app {
   max-width: 1500px;
   min-height: 200px;
-  margin: 0 auto;
-  border: 1px solid black;
+  margin: 24px auto;
   background-color: #ebebeb;
-  display: relative;
+  box-shadow: 0px 0px 4px 2px #ababab;
 }
