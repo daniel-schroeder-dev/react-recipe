@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Header.css';
 
 function Header(props) {
@@ -16,5 +17,9 @@ function Header(props) {
     </header>
   );
 }
+
+Header.propTypes = {
+  handleOpenDialogBox: PropTypes.func.isRequired,
+};
 
 export default Header;
