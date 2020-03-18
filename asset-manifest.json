@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/react-recipe/static/css/main.d3cf6931.chunk.css",
-    "main.js": "/react-recipe/static/js/main.8ccfe4a1.chunk.js",
-    "main.js.map": "/react-recipe/static/js/main.8ccfe4a1.chunk.js.map",
+    "main.css": "/react-recipe/static/css/main.a21649e9.chunk.css",
+    "main.js": "/react-recipe/static/js/main.bd2ba739.chunk.js",
+    "main.js.map": "/react-recipe/static/js/main.bd2ba739.chunk.js.map",
     "runtime-main.js": "/react-recipe/static/js/runtime-main.4ce70eca.js",
     "runtime-main.js.map": "/react-recipe/static/js/runtime-main.4ce70eca.js.map",
-    "static/js/2.fc1c403c.chunk.js": "/react-recipe/static/js/2.fc1c403c.chunk.js",
-    "static/js/2.fc1c403c.chunk.js.map": "/react-recipe/static/js/2.fc1c403c.chunk.js.map",
+    "static/js/2.a71deb40.chunk.js": "/react-recipe/static/js/2.a71deb40.chunk.js",
+    "static/js/2.a71deb40.chunk.js.map": "/react-recipe/static/js/2.a71deb40.chunk.js.map",
     "index.html": "/react-recipe/index.html",
-    "precache-manifest.d5e8cc70a581f116381ca2b5d1b87425.js": "/react-recipe/precache-manifest.d5e8cc70a581f116381ca2b5d1b87425.js",
+    "precache-manifest.561a4010b4fef5e1378a1ba12824c203.js": "/react-recipe/precache-manifest.561a4010b4fef5e1378a1ba12824c203.js",
     "service-worker.js": "/react-recipe/service-worker.js",
-    "static/css/main.d3cf6931.chunk.css.map": "/react-recipe/static/css/main.d3cf6931.chunk.css.map",
-    "static/js/2.fc1c403c.chunk.js.LICENSE.txt": "/react-recipe/static/js/2.fc1c403c.chunk.js.LICENSE.txt"
+    "static/css/main.a21649e9.chunk.css.map": "/react-recipe/static/css/main.a21649e9.chunk.css.map",
+    "static/js/2.a71deb40.chunk.js.LICENSE.txt": "/react-recipe/static/js/2.a71deb40.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4ce70eca.js",
-    "static/js/2.fc1c403c.chunk.js",
-    "static/css/main.d3cf6931.chunk.css",
-    "static/js/main.8ccfe4a1.chunk.js"
+    "static/js/2.a71deb40.chunk.js",
+    "static/css/main.a21649e9.chunk.css",
+    "static/js/main.bd2ba739.chunk.js"
   ]
 }
