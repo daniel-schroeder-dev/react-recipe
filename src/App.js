@@ -70,9 +70,10 @@ class App extends React.Component {
   };
 
   handleDeleteRecipe = id => {
-    this.setState(state => {
-      state.recipes = state.recipes.filter(recipe => recipe.id !== id);
-      return state;
+    this.setState((state, props) => {
+      let recipes = [...state.recipes];
+      recipes = recipes.filter(recipe => recipe.id !== id);
+      return { recipes };
     });
   };
 
