@@ -29,8 +29,7 @@ class CreateRecipeDialogBox extends React.Component {
     this.props.handleCloseDialogBox();
   };
 
-  handleAddIngredientClick = e => {
-    e.preventDefault();
+  handleAddIngredientClick = () => {
     this.setState((state, props) => {
       const ingredients = [...state.ingredients];
       ingredients.push(state.ingredient);
@@ -38,31 +37,31 @@ class CreateRecipeDialogBox extends React.Component {
     });
   };
 
-  checkAddIngredientInput = () => {
-    this.setState(state => {
-      state.ingredients.push(state.ingredient);
-      state.ingredient = '';
-      return state;
-    })
-  };
-
   handleCreateRecipe = e => {
+    
     e.preventDefault();
-    this.checkAddIngredientInput();
-    const recipe = {
-      name: this.state.name,
-      ingredients: this.state.ingredients,
-      instructions: this.state.instructions,
-      img_url: this.state.img_url,
-    };
-    this.setState({
-      name: '',
-      ingredients: [],
-      ingredient: '',
-      instructions: '',
-      img_url: '',
+    
+    this.setState((state, props) => {
+  
+      const recipe = {
+        name: state.name,
+        ingredients: [...state.ingredients, state.ingredient],
+        instructions: state.instructions,
+        img_url: state.img_url,
+      };
+    
+      props.handleCreateRecipe(recipe);
+    
+      return {
+        name: '',
+        ingredients: [],
+        ingredient: '',
+        instructions: '',
+        img_url: '',
+      };
+    
     });
-    this.props.handleCreateRecipe(recipe);
+  
   };
 
   render() {
@@ -111,7 +110,7 @@ class CreateRecipeDialogBox extends React.Component {
               />
             </li>
           </ol>
-          <button className="btn" onClick={this.handleAddIngredientClick}>+</button><span className="create-recipe-dialog-box__add-ingredient-btn-text">Add Ingredient</span>
+          <button className="btn" type="button" onClick={this.handleAddIngredientClick}>+</button><span className="create-recipe-dialog-box__add-ingredient-btn-text">Add Ingredient</span>
         </label>
         <label className="create-recipe-dialog-box__form-element">
           Image Url:
