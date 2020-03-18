@@ -18,7 +18,7 @@ class CreateRecipeDialogBox extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleCloseDialogBox = e => {
+  handleCloseDialogBox = () => {
     this.setState({
       name: '',
       ingredients: [],
@@ -26,7 +26,7 @@ class CreateRecipeDialogBox extends React.Component {
       instructions: '',
       img_url: '',
     });
-    this.props.handleCloseDialogBox(e);
+    this.props.handleCloseDialogBox();
   };
 
   handleAddIngredientClick = e => {

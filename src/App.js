@@ -46,7 +46,7 @@ class App extends React.Component {
     this.setState({ showDialogBox: true});
   };
 
-  handleCloseDialogBox = e => {
+  handleCloseDialogBox = () => {
     this.setState({ showDialogBox: false });
   };
 
